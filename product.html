@@ -16,7 +16,7 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
 
         <h1 class="text-2xl">Greenden</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg id="menuicon"xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -35,34 +35,49 @@
             </li>
         </ul>
     </nav>
+     <!-- side navbar -->
+     <section id="sidenav" class="bg-green-100 fixed z-20 top-0 right-0 transition-all duration-1000 " style="width: 50%;height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="cursor-pointer inline">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600 ">
+        <li>
+            <a class="hover:underline hover:text-black" href="index.html">Home</a>
+
+        </li>
+        <li>
+            <a class="hover:underline  hover:text-black" href="product.html">Products</a>
+        </li>
+        <li>
+            <a class="hover:underline  hover:text-black" href="contact.html">Contact</a>
+        </li>
+    </ul>
+    </section>
+</section>
     <!-- our product-->
     <section class="text-center">
         <h1 class=" font-bold text-3xl mt-5 text-center">Our Products</h1>
-        <input type="text" placeholder="Search for a product.." class="border border-black p-2 m-3" style="width: 70%">
-
-        
-        
-    </section>
+        <input type="text" id="search" placeholder="Search for a product.." class="border border-black p-2 m-3" style="width: 80%">
 <!-- images -->
-    <section class="p-4 text-center">
+    <section id="product-container" class="p-4 text-center">
         
         <div class="grid grid-cols-2 md:grid-cols-4 mt-5 " >
-            <div>
+            <div class="text-center">
                 <img src="./images/img9.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 ">
                 <h1>Rose</h1>
                 <P>$20</P>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/img10.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 "class="inline ">
                 <h1>Tulip</h1>
                 <P>$20</P>
             </div>
-            <div>
-                <img src="./images/img16.jpeg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 "class="inline ">
+            <div class="text-center" >
+                <img src="./images/img16.jpeg" alt="" class=" h-1000 inline hover:shadow-xl transform hover:-translate-y-2 "class="inline ">
                 <h1>Sunflower</h1>
                 <P>$20</P>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/img11.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2"class="inline">
                 <h1>Orchid</h1>
                 <P>$20</P>
@@ -70,24 +85,24 @@
             
 
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 " >
-            <div>
+        <div  class="grid grid-cols-2 md:grid-cols-4 mt-5 " >
+            <div class="text-center">
                 <img src="./images/img12.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 ">
                 <h1>Daisy</h1>
                 <P>$20</P>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/img13.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 "class="inline ">
                 <h1>Lily</h1>
                 <P>$20</P>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/img14.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 "class="inline ">
                 <h1>Lavender
                 </h1>
                 <P>$20</P>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/img15.png" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2"class="inline">
                 <h1>Jasmine</h1>
                 <P>$20</P>
@@ -96,14 +111,17 @@
 
         </div>
 
+    </section>
 
-     </section>
+     
      <!-- Footer -->
     <section class="bg-green-100 p-10 flex flex-col gap-5">
         <h1 class="text-4xl font-bold">Greenden</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum beatae dicta dolorem quisquam cumque modi sint omnis. Reiciendis quibusdam provident consectetur, quo repellendus quae, minus, doloribus odit voluptatum unde cum!</p>
         <p>@2024 greendan.com</p>
     </section>
+    <script src="product.js"></script>
+
 
     
 
